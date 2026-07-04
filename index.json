@@ -1,0 +1,7 @@
+[
+  {
+    "connector" : "Web Scraping",
+    "file" : "fidelity.pvscraper",
+    "name" : "Fidelity"
+  }
+]
