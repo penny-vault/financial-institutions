@@ -1,0 +1,188 @@
+{
+  "connector" : {
+    "dom" : {
+      "_0" : {
+        "extraction" : {
+          "csvAccountColumn" : "2",
+          "csvHeaderRow" : 0,
+          "fields" : [
+            {
+              "field" : "commission",
+              "id" : "E83F608B-7CF1-4B6F-BC55-E6D2E347B46D",
+              "isRequired" : true,
+              "selector" : "9",
+              "transforms" : [
+
+              ]
+            },
+            {
+              "field" : "memo",
+              "id" : "7806D4B2-99D0-4390-BC41-DAED3476AF1B",
+              "isRequired" : true,
+              "selector" : "5",
+              "transforms" : [
+                {
+                  "trim" : {
+
+                  }
+                }
+              ]
+            },
+            {
+              "field" : "accountName",
+              "id" : "A53A2B9A-FCA6-497F-BD5D-67AC480E53AD",
+              "isRequired" : true,
+              "selector" : "1",
+              "transforms" : [
+                {
+                  "trim" : {
+
+                  }
+                }
+              ]
+            },
+            {
+              "field" : "price",
+              "id" : "D601E522-964A-4CA1-8542-0BA4C92747C3",
+              "isRequired" : true,
+              "selector" : "7",
+              "transforms" : [
+
+              ]
+            },
+            {
+              "field" : "quantity",
+              "id" : "E78C4AAD-239E-4A12-8D1C-F385A6EF1701",
+              "isRequired" : true,
+              "selector" : "8",
+              "transforms" : [
+
+              ]
+            },
+            {
+              "field" : "date",
+              "id" : "50932CAE-5600-4103-9207-CD59814F53E3",
+              "isRequired" : true,
+              "selector" : "0",
+              "transforms" : [
+
+              ]
+            },
+            {
+              "field" : "symbol",
+              "id" : "6FE595BD-FD65-4DC1-992C-1D75E8A8011E",
+              "isRequired" : true,
+              "selector" : "4",
+              "transforms" : [
+                {
+                  "trim" : {
+
+                  }
+                }
+              ]
+            },
+            {
+              "field" : "description",
+              "id" : "4F51D372-E76F-40D8-BBFF-60991EB3FEA0",
+              "isRequired" : true,
+              "selector" : "3",
+              "transforms" : [
+                {
+                  "trim" : {
+
+                  }
+                }
+              ]
+            },
+            {
+              "field" : "amount",
+              "id" : "14872B1D-84C8-4F8E-88BF-465B45FDAC10",
+              "isRequired" : true,
+              "selector" : "12",
+              "transforms" : [
+
+              ]
+            },
+            {
+              "field" : "fees",
+              "id" : "7C6CDB9B-B0FE-4033-9866-0E546189192B",
+              "isRequired" : true,
+              "selector" : "10",
+              "transforms" : [
+
+              ]
+            }
+          ],
+          "maxPages" : 1,
+          "mode" : "csvDownload"
+        },
+        "startURL" : "https:\/\/fidelity.com",
+        "steps" : [
+          {
+            "click" : {
+              "selector" : "#login-link-node"
+            }
+          },
+          {
+            "fill" : {
+              "parameterID" : "username",
+              "selector" : "#dom-username-input"
+            }
+          },
+          {
+            "click" : {
+              "selector" : "#dom-pswd-input"
+            }
+          },
+          {
+            "fill" : {
+              "parameterID" : "password",
+              "selector" : "#dom-pswd-input"
+            }
+          },
+          {
+            "click" : {
+              "selector" : "#dom-login-button"
+            }
+          },
+          {
+            "click" : {
+              "selector" : "#portsum-tab-activity > a"
+            }
+          },
+          {
+            "click" : {
+              "selector" : "#accountDetails > div > div > div:nth-of-type(2) > new-tab-group > new-tab-group-ui > section > activity-orders-shell > activity-orders-old-shell > section > div > ap143528-portsum-dashboard-activity-orders-home-root > div > div > account-activity-container > div > div:nth-of-type(1) > div:nth-of-type(1) > div > div:nth-of-type(2) > ap154603-activity-order-download-ui > div > div > apex-kit-web-button > s-root > button"
+            }
+          },
+          {
+            "click" : {
+              "selector" : "#downloadContent > ul > li > button"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "connectorType" : "Web Scraping",
+  "institution" : "Fidelity",
+  "metadata" : {
+    "created" : "2026-07-03T16:48:35Z"
+  },
+  "name" : "Fidelity",
+  "parameters" : [
+    {
+      "id" : "username",
+      "isRequired" : true,
+      "kind" : "credentialUsername",
+      "label" : "Username"
+    },
+    {
+      "id" : "password",
+      "isRequired" : true,
+      "kind" : "credentialPassword",
+      "label" : "Password"
+    }
+  ],
+  "version" : "1.0"
+}
